@@ -5,10 +5,10 @@
 -- DROP TABLE IF EXISTS <username>.raw_edits;
 
 CREATE EXTERNAL TABLE
-<username>.raw_edits (
+zsuzsi.raw_edits (
     title STRING,
     edits INT,
     date DATE,
     retrieved_at STRING)
 ROW FORMAT SERDE 'org.openx.data.jsonserde.JsonSerDe'
-LOCATION 's3://<username>-wikidata/raw-edits/';
+LOCATION 's3://zsuzsi-wikidata/raw-edits/';
